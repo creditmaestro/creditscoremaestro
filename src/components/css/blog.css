@@ -1,0 +1,32 @@
+
+.article-page {
+    margin-top: 6em;
+}
+.blogtitle
+{
+    position: absolute;
+    text-align: center;
+    font-family: zaf;
+    color: white;
+    font-size: 1.25em;
+    top: 0;
+    left: 25%;
+    height: 22%;
+    width: 50%;
+    padding-bottom: 1.25em;
+    background-color: rgb(70, 70, 70);
+    box-shadow: 4px 0 4px 4px white;
+}
+
+.blog-article-text
+{
+    font-family: Tahoma;
+    line-height: 1.75rem;
+    text-indent: 30px;
+}
+
+.blog-description-text
+{
+    font-family: Tahoma;
+}
+

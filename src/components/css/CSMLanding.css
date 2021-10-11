@@ -1,0 +1,285 @@
+﻿
+.hide { display: none };
+
+#ScrollTopImg
+{
+    width: 60px;
+}
+.myscrolltop 
+{
+    position: fixed;
+    bottom: 5%;
+    right: 2%;
+    opacity: .8;
+}
+
+.homelink h1 { display: inline; font-size: 1em; }
+
+.myscrolltop:hover 
+{
+    opacity: 1;
+}
+
+
+.article-link { font-size: 1.25rem !important; }
+
+@media (min-width: 768px) {
+    #ScrollTopImg { width: auto; }
+}
+/* _______________ Social Media asx Control Links _______________ */
+.social
+{
+    display: none;
+}
+@media (min-width: 1200px) {
+    .blogtitle { 
+        font-size: 1.85em;
+
+    }
+    .social {
+        display: inline-block;
+        position: fixed;
+        font-size: 1.25em;
+        font-family: Berling, Arial;
+        top: 100px;
+        width: 0;
+        z-index: 1;
+    }
+
+        .social ul {
+            padding: 0px;
+            -webkit-transform: translate(-270px, 0);
+            -moz-transform: translate(-270px, 0);
+            -ms-transform: translate(-270px, 0);
+            -o-transform: translate(-270px, 0);
+            transform: translate(-270px, 0);
+            z-index: 1;
+        }
+
+            .social ul li {
+                display: block;
+                margin: 5px 5px 5px 10px;
+                background: rgba(0, 0, 0, 0.36);
+                width: 300px;
+                text-align: right;
+                padding: 8px 8px 0 3px;
+                -webkit-border-radius: 0 30px 30px 0;
+                -moz-border-radius: 0 30px 30px 0;
+                border-radius: 0 30px 30px 0;
+                -webkit-transition: all 1s;
+                -moz-transition: all 1s;
+                -ms-transition: all 1s;
+                -o-transition: all 1s;
+                transition: all 1s;
+            }
+
+                .social ul li:hover {
+                    -webkit-transform: translate(90px, 0);
+                    -moz-transform: translate(90px, 0);
+                    -ms-transform: translate(90px, 0);
+                    -o-transform: translate(90px, 0);
+                    transform: translate(90px, 0);
+                    background: rgba(155, 155, 255, 0.4);
+                }
+
+                .social ul li a {
+                    color: Black;
+                    padding: 0;
+                }
+
+                .social ul li:hover a {
+                    color: #000;
+                }
+
+                .social ul li:hover img {
+                    color: #fff;
+                    background: rgba(0, 0, 0, 0.36);
+                    -webkit-transform: rotate(360deg);
+                    -moz-transform: rotate(360deg);
+                    -ms-transform: rotate(360deg);
+                    -o-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                    -webkit-transition: all 1s;
+                    -moz-transition: all 1s;
+                    -ms-transition: all 1s;
+                    -o-transition: all 1s;
+                    transition: all 1s;
+                }
+
+                .social ul li img {
+                    display: inline;
+                    margin: 0 0 8px 0;
+                    color: #000;
+                    background: #fff;
+                    padding: 1px;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    border-radius: 50%;
+                    width: 30px;
+                    height: 30px;
+                    background: #ffffff;
+                    -webkit-transform: rotate(0deg);
+                    -moz-transform: rotate(0deg);
+                    -ms-transform: rotate(0deg);
+                    -o-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+}
+
+.checkbox-img
+{
+    width: 50px;
+}
+.comment 
+{
+    font-size: 1.15em;
+    font-family: Berling;
+    margin: 10px 0 0 5px;
+}
+@media (min-width: 760px) {
+    .comment 
+    {
+        font-size: 1.5em;
+    }
+}
+
+/*___________________ Main Content area for landing page ____________________ */
+
+
+.qacontainer p
+{
+    font-family: Berling;
+    font-size: 1.25em;
+}
+.qalist
+{
+    font-size: 1.15em;
+    text-align: left;
+    list-style-type: none;
+    background-color: White;
+    padding-left: 0;
+}
+.qalist li
+{
+    margin-bottom: 5px;
+    box-shadow: inset 0 0 10px #007849;
+    padding: 11px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.question
+{
+    display: block;
+    width: 90%;
+    margin: 1em auto;
+    font-size: 1.25em;
+    background-color: #B2D390;
+    border-radius: 5px;
+    padding: 10px 15px;
+    box-shadow: inset 0px 0px 12px #434138;
+}
+
+.answer
+{
+    color: Black;
+    margin-left: 20px;
+    background: rgba(255, 160, 0, .5);
+}
+
+.landingstatement span {
+    font-family: Berling;
+    line-height: .95em;
+}
+
+.letterstyle1
+{
+    color: black;
+    font-size: 1.75em;
+    margin-bottom: -10px;
+}
+.letterstyle2
+{
+    color: #a8bc39;
+    font-size: 1.5em;
+}
+.letterstyle3
+{
+    color: #a8bc39;
+    font-size: 1.5em;
+    font-style: italic;
+}
+.letterstyle4
+{
+    color: #839267;
+    font-size: 1.25em;
+}
+.letterstyle3sm
+{
+    color: #a8bc39;
+    font-size: 1.5em;
+    font-style: italic;
+}
+.letterstyle4sm
+{
+    color: #839267;
+    font-size: 1.25em;
+}
+@media (min-width: 760px) {
+    .landingstatement 
+    {
+        font-family: Berling;
+    }
+    .letterstyle1
+    {
+        font-size: 2.75em !important;
+    }
+    .letterstyle2
+    {
+        font-size: 2.5em !important;
+    }
+    .letterstyle3
+    {
+        font-size: 2.5em !important;
+    }
+    .letterstyle4
+    {
+        font-size: 2.25em !important;
+    }
+}
+.reviews
+{
+    position: relative;
+    font-family: zaf;
+    font-size: 1.5em;
+    margin-left: 10vw;
+}
+
+.reviewname { font-family: Berling; font-weight: bold; font-size: .8em;}
+.home-book-img
+{
+    width: 200px;
+}
+.readmore {
+    color: #87944f !important;
+    font-weight: bold;
+    cursor: pointer;
+}
+@media (min-width: 768px) {
+    .home-book-img
+    {
+        z-index: 1;
+        position: absolute !important;
+        top: -60px;
+        left: -140px;
+        box-shadow: 1px 1px 2px 1px black;
+        width: 100px;
+    }
+    .btn-cta-lgscreen
+    {
+        margin-left: 4rem;
+    }
+    .w-cta
+    {
+        width: 50% !important;
+    }
+}

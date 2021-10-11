@@ -1,0 +1,51 @@
+﻿/* _______________ Validation ____________________ */
+
+@media (min-width: 1200px) {
+    .validbox {
+        position: absolute;
+        opacity: 0;
+        color: Black;
+        top: 0;
+        left: 0;
+        margin-left: -25em;
+        padding: 1em;
+        width: 14em;
+        height: 5em;
+        background: #B2D390;
+        border-radius: 4px;
+        box-shadow: 0 0 2px .1em Black;
+        transition: opacity 0.7s ease-out, margin 0.7s ease-out;
+    }
+
+    .validbox::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 103%;
+        top: 0;
+        border-width: 20px 10px;
+        border-style: solid;
+        border-color: #B2D390 transparent transparent transparent;
+        transform: rotate(-90deg);
+    }
+
+    .signuptxtbox:hover + .validbox, .signuptxtbox:focus + .validbox {
+        opacity: 1;
+        margin-left: -15.5em;
+    }
+}
+/*End*/
+
+.signupblock input[type=text], .signupblock input[type=password],
+.loginblock input[type=text], .loginblock input[type=password]
+{
+    font-family: Berling;
+    font-size: 1.25em;
+    height: 1.5em;
+    border-radius: .2em;
+    padding: 0 0 0 5px;
+    border: 2px solid transparent;
+    background: #EAE3EA;
+    width: 300px;
+}

@@ -1,0 +1,20 @@
+﻿
+#PDFPanel, #FormsPanel, #TemplatesPanel
+{
+    text-align: center; 
+}
+#PDFPanel a, #FormsPanel a, #TemplatesPanel a
+{
+    display: block;
+    width: 90%;
+    margin: 1em auto;
+    font-size: 1.25em;
+    background-color: #B2D390;
+    border-radius: 5px;
+    padding: 10px 15px;
+    box-shadow: inset 0px 0px 12px #434138;
+}
+#PDFPanel a:hover, #FormsPanel a:hover, #TemplatesPanel a:hover
+{
+    box-shadow: inset 0px 0px 18px #434138;
+}
