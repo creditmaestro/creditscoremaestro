@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const QA = ({ question, answer }) => {
+const Qa = ({ question, answer }) => {
 
     const [isViz, setViz] = useState(false);
     
@@ -18,4 +18,4 @@ const QA = ({ question, answer }) => {
     );
 };
 
-export default QA;
+export default Qa;

@@ -21,6 +21,7 @@ const IndexPage = () => {
                         excerpt
                       }
                       title
+                      slug
                       body {
                         raw
                       }
@@ -88,9 +89,9 @@ const IndexPage = () => {
           </div>
           <div className="row align-items-center mb-3 bg-info p-3 mr-0 ml-0">
                 <div className="col-3 ml-2">
-                  <Link to="https://www.amazon.com/Winning-Credit-Score-Game-Complete/dp/0999415301/" className="btn btn-cta btn-cta-lgscreen">
+                  <a href="https://www.amazon.com/Winning-Credit-Score-Game-Complete/dp/0999415301/" className="btn btn-cta btn-cta-lgscreen">
                       Get Our Book!
-                  </Link>
+                  </a>
                 </div>
                 <div className="card border-0 h-75 reviews w-cta bg-info">
                 <StaticImage className="home-book-img" 
@@ -102,18 +103,20 @@ const IndexPage = () => {
                   </p>
                 </div>
           </div>
-          <div class="container">
-            <div class="row mt-5">
+          <div className="container">
+            <div className="row mt-5">
               {
-                  landingBlogs.allContentfulBlogPost.edges.map(edge => {
+                  landingBlogs.allContentfulBlogPost.edges.map((edge, i) => {
                     let img = getImage(edge.node.featuredImage);
                     return (
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100 border-0">
-                            <div class="card-body">
-                              <a href="/" className="article-link"><b>{ edge.node.title }</b></a>
-                              <p class="card-text blog-description-text">
-                                <small class="post_meta">
+                    <div key={i} className="col-md-4 mb-4">
+                        <div className="card h-100 border-0">
+                            <div className="card-body">
+                              <Link to={"http://localhost:8000/" + edge.node.slug} className="article-link">
+                                <b>{ edge.node.title }</b>
+                              </Link>
+                              <p className="card-text blog-description-text">
+                                <small className="post_meta">
                                   By { edge.node.author } - Published&nbsp; 
                                   { articleDateFormat(edge.node.publishedDate) }
                                 </small>

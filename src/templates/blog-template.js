@@ -47,15 +47,15 @@ export default function BlogTemplate({data, pageContext }) {
                         <h3>Recommended Articles</h3>
                     </div>
                     {
-                    recArticles.allContentfulBlogPost.edges.map(edge => {
+                    recArticles.allContentfulBlogPost.edges.map((edge, i) => {
                         let recImg = edge.node.featuredImage;
                         let renderImg = getImage(recImg);
                         return (
-                            <div className="card-body">
+                            <div key={i} className="card-body">
                                 <GatsbyImage className="card-img-top" image={renderImg} />
                                 <small className="post_meta">By {edge.node.author} - Published Dec 4, 2018</small>
                                 <div className="card-title">
-                                    <a className="article-link" href="~/Blog/2018/The-New-FicoUltra-Credit-Scoring-System-What-It-Means-For-You.aspx" id="HyperLink15" >
+                                    <a className="article-link" href={edge.node.slug} id="HyperLink15" >
                                         {edge.node.title}
                                     </a>
                                 </div>

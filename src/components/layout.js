@@ -8,17 +8,19 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql, Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
+import Img from "gatsby-image";
 import Collapse from 'react-bootstrap/Collapse';
 import "./css/bootstrap.css"
 
-const Layout = ({ children }) => {
+export default function Layout({ children }) {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
+    query {
+      fileName: file(relativePath: {eq: "Logo-Trans.png"}) {
+        childImageSharp {
+          fixed {
+            ...GatsbyImageSharpFixed
+          }
+        }   
       }
     }
   `)
@@ -32,15 +34,17 @@ const Layout = ({ children }) => {
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
       <div className="container">
-          <Link className="navbar-brand homelink" to="/">
-            <StaticImage alt="Logo" src="../images/Logo-Trans.png" width={25} id="BookImg" />
-            <h1>Credit Score Maestro</h1>
-          </Link>
+        
+        <Link className="navbar-brand homelink" to="/">
+          <Img alt="Logo" style={{width: "25px", height: "25px"}} id="BookImg" fixed={data.fileName.childImageSharp.fixed} />
+          <h1>Credit Score Maestro</h1>
+        </Link>
         <button aria-expanded={isMobileToggled} onClick={mobileToggle} className={(isMobileToggled === true) ? "navbar-toggler" : "navbar-toggler collapsed"} type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
+        
         <Collapse in={isMobileToggled}>
-          <div className="navbar-collapse">
+          <div className="navbar-collapse flex-basis-fix">
           <ul className="navbar-nav ml-4">
             <li className="nav-item mr-4">
               <Link className="nav-link bg-info" to="/signup/">
@@ -112,4 +116,4 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+
