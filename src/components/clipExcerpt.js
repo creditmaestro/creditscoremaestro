@@ -16,8 +16,11 @@ const ClipExcerpt = (excerpt, readMore) => {
     return (
         <>
             { excerptObj.keep }
-            { showClip ? 
-                strClip
+            { showClip ? (
+                <> 
+                    {strClip} <a className="readmore" onClick={() => setClip(!showClip)}> Read less</a>
+                </>
+            )
             :
                 <a className="readmore" onClick={() => setClip(!showClip)}>... Read more</a>
             }  

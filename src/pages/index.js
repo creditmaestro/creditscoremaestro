@@ -84,7 +84,6 @@ const IndexPage = () => {
                   </div>
                </div>
               </div>
-
               </div>
           </div>
           <div className="row align-items-center mb-3 bg-info p-3 mr-0 ml-0">
@@ -120,7 +119,7 @@ const IndexPage = () => {
                                   By { edge.node.author } - Published&nbsp; 
                                   { articleDateFormat(edge.node.publishedDate) }
                                 </small>
-                                <GatsbyImage className="card-img"
+                                <GatsbyImage alt={edge.node.featuredImage.title} className="card-img"
                                 alt={edge.node.featuredImage.title}
                                 image={img} />
                                 { clipExcerpt(edge.node.excerpt.excerpt) }
