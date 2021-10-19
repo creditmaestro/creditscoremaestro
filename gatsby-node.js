@@ -34,7 +34,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     const blogTemplate = path.resolve(`src/templates/blog-template.js`);
          
     data.allContentfulBlogPost.edges.forEach(edge => {
-        const path = "/" + edge.node.slug;
+        const path = "/blog/" + edge.node.slug;
        
         createPage({
             path,

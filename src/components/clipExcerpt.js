@@ -1,10 +1,10 @@
 import React, { useState } from "react"
 
-const ClipExcerpt = (excerpt, readMore) => {
+const ClipExcerpt = ({excerpt}) => {
 
     const [showClip, setClip] = useState(false);
 
-    let strExcerpt = String(excerpt);
+    const strExcerpt = String(excerpt);
     const strKeep = strExcerpt.substr(0, 100);
     const strClip = strExcerpt.substr(100, strExcerpt.length);
 

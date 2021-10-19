@@ -111,7 +111,7 @@ const IndexPage = () => {
                     <div key={i} className="col-md-4 mb-4">
                         <div className="card h-100 border-0">
                             <div className="card-body">
-                              <Link to={"http://localhost:8000/" + edge.node.slug} className="article-link">
+                              <Link to={"/blog/" + edge.node.slug} className="article-link">
                                 <b>{ edge.node.title }</b>
                               </Link>
                               <p className="card-text blog-description-text">
