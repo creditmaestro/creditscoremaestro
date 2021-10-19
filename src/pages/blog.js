@@ -60,17 +60,21 @@ const BlogsPage = () => {
     const [filteredArticles, setFilter] = useState(data.allBlogs.edges);
     
     const searchInput = e => {
+
       const qry = e.target.value;
-
-      const filteredData = allArticles.filter(article => {
-        
-        const title = article.node.title;
-        return title.toLowerCase().includes(qry.toLowerCase()); 
-      });
-
-      console.log(filteredData);
       
-      setFilter(filteredData);
+      if (qry != "") {
+        const filteredData = data.allBlogs.edges.filter(article => {
+        
+          const {title, excerpt} = article.node;
+          return title.toLowerCase().includes(qry.toLowerCase()) ||
+                 excerpt.excerpt.toLowerCase().includes(qry.toLowerCase()); 
+        });
+        setFilter(filteredData);
+      } else {
+        setFilter(data);
+      }
+      
     }
 
     const allArticles = (filteredArticles.length > 0) ? filteredArticles : data.allBlogs.edges;
@@ -81,9 +85,11 @@ const BlogsPage = () => {
           <div className="container my-6">
             <div className="row">
               <div className="col-lg-8">
-              Search: <input onChange={searchInput} type="text" />
+               <input placeholder="Search articles..."
+                onChange={searchInput} 
+                type="text" />
               <h1 className="blog-headers">Articles</h1>
-                {filteredArticles.map((edge, i) => {
+                {allArticles.map((edge, i) => {
                   return (
                     <div key={i} className="card border-0">
                         <div className="card-body">
