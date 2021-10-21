@@ -66,9 +66,12 @@ const BlogsPage = () => {
       if (qry != "") {
         const filteredData = data.allBlogs.edges.filter(article => {
         
-          const {title, excerpt} = article.node;
+          const {title, excerpt, publishedDate} = article.node;
+          const artDate = articleDateFormat(publishedDate);
+          
           return title.toLowerCase().includes(qry.toLowerCase()) ||
-                 excerpt.excerpt.toLowerCase().includes(qry.toLowerCase()); 
+                 excerpt.excerpt.toLowerCase().includes(qry.toLowerCase()) ||
+                 artDate.toLowerCase().includes(qry.toLowerCase()); 
         });
         setFilter(filteredData);
       } else {
@@ -86,7 +89,7 @@ const BlogsPage = () => {
           <div className="container my-6">
             <div className="row">
               <div className="col-lg-8">
-               <input className="blog-searchbox" placeholder="Search articles..."
+               <input className="blog-searchbox" placeholder="Search articles (by phrase, year etc...)"
                 onChange={searchInput} 
                 type="text" />
               <h1 className="blog-headers">Articles</h1>
