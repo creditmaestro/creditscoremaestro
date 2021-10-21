@@ -33,3 +33,15 @@
 .blog-headers {
     font-family: Berling;
 }
+
+.blog-searchbox, .blog-searchbox:focus {
+    padding: 6px;
+    border-top: 0px;
+    border-right: 0px;
+    width: 300px;
+    margin-bottom: 1.5em;
+}
+
+.blog-searchbox:focus {
+    outline: none;
+}

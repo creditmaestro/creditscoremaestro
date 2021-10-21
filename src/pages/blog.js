@@ -77,7 +77,8 @@ const BlogsPage = () => {
       
     }
 
-    const allArticles = (filteredArticles.length > 0) ? filteredArticles : data.allBlogs.edges;
+    let allArticles = (filteredArticles.length > 0) ? filteredArticles : data.allBlogs.edges;
+    if (filteredArticles.length == 0) allArticles = [];
 
     return (
         <Layout>
@@ -85,28 +86,33 @@ const BlogsPage = () => {
           <div className="container my-6">
             <div className="row">
               <div className="col-lg-8">
-               <input placeholder="Search articles..."
+               <input className="blog-searchbox" placeholder="Search articles..."
                 onChange={searchInput} 
                 type="text" />
               <h1 className="blog-headers">Articles</h1>
-                {allArticles.map((edge, i) => {
-                  return (
-                    <div key={i} className="card border-0">
-                        <div className="card-body">
-                          <Link to={edge.node.slug} className="article-link">
-                            <b>{ edge.node.title }</b>
-                          </Link>
-                          <p className="card-text blog-description-text">
-                            <small className="post_meta">
-                              By { edge.node.author } - Published&nbsp; 
-                              { articleDateFormat(edge.node.publishedDate) }
-                            </small>
-                            <ClipExcerpt excerpt={edge.node.excerpt.excerpt} />
-                          </p>
-                        </div>
-                    </div>
-                  )
-                })}
+                {
+                (allArticles.length > 0) ?
+                  allArticles.map((edge, i) => {
+                    return (
+                      <div key={i} className="card border-0">
+                          <div className="card-body">
+                            <Link to={edge.node.slug} className="article-link">
+                              <b>{ edge.node.title }</b>
+                            </Link>
+                            <p className="card-text blog-description-text">
+                              <small className="post_meta">
+                                By { edge.node.author } - Published&nbsp; 
+                                { articleDateFormat(edge.node.publishedDate) }
+                              </small>
+                              <ClipExcerpt excerpt={edge.node.excerpt.excerpt} />
+                            </p>
+                          </div>
+                      </div>
+                    )}) :
+                    <> 
+                      Sorry! No articles match your search. Please try refining your search query.
+                    </>
+                }
               </div>
               <div className="col-lg-4">
                 <h1 className="blog-headers">Featured</h1>
