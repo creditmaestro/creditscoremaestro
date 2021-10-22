@@ -30,7 +30,7 @@
     font-family: Tahoma;
 }
 
-.blog-headers {
+.blog-headers, .blog-searchbox::placeholder {
     font-family: Berling;
 }
 
@@ -45,3 +45,4 @@
 .blog-searchbox:focus {
     outline: none;
 }
+

@@ -3,7 +3,7 @@ import { Link, useStaticQuery, graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
-import clipExcerpt from '../components/clipExcerpt';
+import ClipExcerpt from '../components/ClipExcerpt';
 import articleDateFormat from '../components/articleDateFormat';
 import SEO from "../components/seo";
 import "../components/css/CSMLanding.css";
@@ -122,7 +122,7 @@ const IndexPage = () => {
                                 <GatsbyImage alt={edge.node.featuredImage.title} className="card-img"
                                 alt={edge.node.featuredImage.title}
                                 image={img} />
-                                { clipExcerpt(edge.node.excerpt.excerpt) }
+                                <ClipExcerpt excerpt={edge.node.excerpt.excerpt} />
                               </p>
                             </div>
                         </div>
