@@ -77,7 +77,7 @@ export default function Layout({ children }) {
                 </a>
                 <ul className={(isToggled===true)? "dropdown-menu show" : "dropdown-menu"}>
                     <li className="dropdown-item">
-                      <Link className="nav-link bg-info" to="/blog/">
+                      <Link className="nav-link bg-info" to="/mission/">
                         Mission
                       </Link>
                     </li>

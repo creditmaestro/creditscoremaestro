@@ -2,12 +2,13 @@ import React from "react";
 import { graphql } from 'gatsby';
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import ArticleBody from "../components/articleBody";
+import articleDateFormat from "../components/articleDateFormat";
 import Layout from "../components/layout";
 import "../components/css/blog.css";
 
 export default function BlogTemplate({data, pageContext }) {
 
-    const {title} = pageContext.blog;
+    const {title, author, publishedDate} = pageContext.blog;
     const {body} = pageContext.blog;
     const img = getImage(pageContext.blog.featuredImage);
     
@@ -24,7 +25,10 @@ export default function BlogTemplate({data, pageContext }) {
                         <header>
                         <div className="card-header">
                             <div className="card-title">
-                            <h1>{ title }</h1>
+                                <h1>{ title }</h1>
+                                <span className="blog-meta">
+                                    By { author } - Published { articleDateFormat(publishedDate) }
+                                </span>
                             </div>
                         </div>
                         <div id="Blog-Image">
@@ -65,7 +69,6 @@ export default function BlogTemplate({data, pageContext }) {
                     }
 			       
                 </div>
-                
 
                 <div id="blog-sidebar"></div>
             </div>

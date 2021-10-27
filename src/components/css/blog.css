@@ -34,6 +34,11 @@
     font-family: Berling;
 }
 
+.blog-meta {
+    font-size: .75em;
+    color: gray;
+}
+
 .blog-searchbox, .blog-searchbox:focus {
     padding: 6px;
     border-top: 0px;
