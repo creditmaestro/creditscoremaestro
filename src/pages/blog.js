@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import articleDateFormat from "../components/articleDateFormat";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import ClipExcerpt from "../components/clipExcerpt";
+import ClipExcerpt from "../components/ClipExcerpt";
 
 const BlogsPage = () => {
 
