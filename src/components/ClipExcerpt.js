@@ -13,8 +13,12 @@ const ClipExcerpt = ({excerpt}) => {
         clipped: strClip
     }
 
+    const excerptStyle = {
+        fontSize: "1.25em"
+    }
+
     return (
-        <>
+        <div style={excerptStyle}>
             { excerptObj.keep }
             { showClip ? (
                 <> 
@@ -25,7 +29,7 @@ const ClipExcerpt = ({excerpt}) => {
                 <a className="readmore" onClick={() => setClip(!showClip)}>... Read more</a>
             }  
             
-        </>
+        </div>
     )
 }
 

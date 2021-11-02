@@ -9,6 +9,7 @@ import SEO from "../components/seo";
 import "../components/css/CSMLanding.css";
 
 const IndexPage = () => {
+
     const landingBlogs = useStaticQuery(
         graphql`
             query{
