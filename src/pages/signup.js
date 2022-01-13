@@ -37,7 +37,7 @@ const SignUp = () => {
               {
                 result ? 
                 <b>
-                  {result.msg}
+                  { result.msg }
                 </b>
                 :
                 ""
