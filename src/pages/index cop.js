@@ -89,21 +89,25 @@ const IndexPage = () => {
               </div>
           </div>
           <div className="row align-items-center mb-3 bg-info p-3 mr-0 ml-0">
-            <div className="review-buy-box">
+            <div className="container">
+            <div className="row">
+            <div className="col-lg-1">
               <StaticImage className="home-book-img" 
                   alt="Credit repair book." 
                   src="../images/Front-Cover-400x600.jpg" id="BookImg" />
-            
-              <div className="ml-3">
-                <PayPalBtn />
-              </div>
-            
-              <div className="border-0 reviews bg-info ml-4">
+            </div>
+            <div className="col-lg-3">
+              <PayPalBtn />
+            </div>
+            <div className="col-lg-8">
+              <div className="border-0 reviews bg-info">
                 <p className="text-white m-0 bg-info">
                   "Clear and concise. An easy to use guide that allowed me to take control of 
                   my credit score. A real home run!" <span className="reviewname">Michael Williams, GA</span>
                 </p>
               </div>
+            </div>
+            </div>
             </div>
           </div>
           <div className="container">

@@ -248,12 +248,17 @@
         font-size: 2.25em !important;
     }
 }
+
+.review-buy-box {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 5vw;
+    align-items: center;
+}
 .reviews
 {
-    position: relative;
     font-family: zaf;
     font-size: 1.5em;
-    margin-left: 10vw;
 }
 
 .reviewname { font-family: Berling; font-weight: bold; font-size: .8em;}
@@ -269,19 +274,28 @@
 @media (min-width: 768px) {
     .home-book-img
     {
-        z-index: 1;
+       /* z-index: 1;
         position: absolute !important;
         top: -60px;
-        left: -140px;
+        left: -140px;*/
+        display: inline-block;
         box-shadow: 1px 1px 2px 1px black;
         width: 100px;
     }
     .btn-cta-lgscreen
     {
-        margin-left: 4rem;
+        margin-left: 1em;
     }
     .w-cta
     {
         width: 50% !important;
+    }
+}
+
+@media (min-width: 1500px) {
+    .review-buy-box {
+        display: flex;
+        padding: 0 13vw;
+        align-items: center;
     }
 }

@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 import Collapse from 'react-bootstrap/Collapse';
-import "./css/bootstrap.css"
+import "./css/bootstrap.css";
 
 export default function Layout({ children }) {
   const data = useStaticQuery(graphql`

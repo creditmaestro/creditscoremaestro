@@ -2009,7 +2009,8 @@ fieldset[disabled] a.btn {
 }
 
 .btn-cta {
-    font-family: Berling;
+  font-family: Berling;
+  cursor: pointer;
   font-size: 1.7em;
   font-weight: 300;
   color: #fff;
