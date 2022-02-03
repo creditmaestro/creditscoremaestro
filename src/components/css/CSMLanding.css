@@ -272,6 +272,9 @@
     cursor: pointer;
 }
 @media (min-width: 768px) {
+    .review-buy-box {
+        flex-wrap: nowrap;
+     }
     .home-book-img
     {
        /* z-index: 1;
@@ -294,8 +297,6 @@
 
 @media (min-width: 1500px) {
     .review-buy-box {
-        display: flex;
         padding: 0 13vw;
-        align-items: center;
     }
 }
