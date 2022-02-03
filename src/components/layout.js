@@ -62,7 +62,7 @@ export default function Layout({ children }) {
               </Link>
             </li>
             <li className="nav-item mr-4">
-              <Link className="nav-link bg-info" to="/blog/">
+              <Link className="nav-link bg-info" to="/blog">
                 Maestro's Blog
               </Link>
             </li>

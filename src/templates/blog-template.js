@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import ArticleBody from "../components/articleBody";
 import articleDateFormat from "../components/articleDateFormat";
@@ -79,10 +79,10 @@ export default function BlogTemplate({data, pageContext }) {
                     <div className="card-body blog-article-text">
                         <em>
                             To learn more about current credit building strategies and rules, and how they effect you as a 
-                            consumer, stay up-to-date by 
-                            <a href="~/Blog/Blog-Home.aspx" id="HyperLink1" >
+                            consumer, stay up-to-date by&nbsp; 
+                            <Link to="/blog">
                                 reading more on our blog.
-                            </a>
+                            </Link>
                         </em>
                     </div>
                 </div>
