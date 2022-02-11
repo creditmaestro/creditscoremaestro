@@ -2,13 +2,14 @@ import React from "react";
 import { graphql, Link } from 'gatsby';
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import ArticleBody from "../components/articleBody";
-import articleDateFormat from "../components/articleDateFormat";
+// import articleDateFormat from "../components/articleDateFormat";
 import Layout from "../components/layout";
 import "../components/css/blog.css";
+import SEO from "../components/seo";
 
 export default function BlogTemplate({data, pageContext }) {
 
-    const {title, author, publishedDate} = pageContext.blog;
+    const {title, author, publishedDate, excerpt, slug} = pageContext.blog;
     const {body} = pageContext.blog;
     const img = getImage(pageContext.blog.featuredImage);
     
@@ -16,6 +17,12 @@ export default function BlogTemplate({data, pageContext }) {
 
     return (
         <Layout>
+            <SEO 
+                title={ title } 
+                type="article" 
+                url={"https://creditscoremaestro.com/blog/" + slug}
+                description={ excerpt.excerpt }
+            />
             <div className="container">
             <div className="row article-page">
             {/* Artice */}
@@ -27,7 +34,10 @@ export default function BlogTemplate({data, pageContext }) {
                             <div className="card-title">
                                 <h1>{ title }</h1>
                                 <span className="blog-meta">
-                                    By { author } - Published { articleDateFormat(publishedDate) }
+                                    By { author }
+                                    {/* - Published&nbsp; 
+                                        { articleDateFormat(edge.node.publishedDate) }
+                                    */}
                                 </span>
                             </div>
                         </div>
@@ -59,9 +69,9 @@ export default function BlogTemplate({data, pageContext }) {
                                 <GatsbyImage className="card-img-top" image={renderImg} />
                                 <small className="post_meta">By {edge.node.author} - Published Dec 4, 2018</small>
                                 <div className="card-title">
-                                    <a className="article-link" href={edge.node.slug} id="HyperLink15" >
-                                        {edge.node.title}
-                                    </a>
+                                <Link to={"/blog/" + edge.node.slug} className="article-link">
+                                    { edge.node.title }
+                                </Link>
                                 </div>
                             </div>
                         )

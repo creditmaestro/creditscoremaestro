@@ -4,7 +4,7 @@ import { Link, useStaticQuery, graphql } from "gatsby";
 import Layout from "../components/layout";
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 import ClipExcerpt from '../components/ClipExcerpt';
-import articleDateFormat from '../components/articleDateFormat';
+// import articleDateFormat from '../components/articleDateFormat';
 import PayPalBtn from '../components/payPalBtn';
 import SEO from "../components/seo";
 import "../components/css/CSMLanding.css";
@@ -120,8 +120,10 @@ const IndexPage = () => {
                               </Link>
                               <p className="card-text blog-description-text">
                                 <small className="post_meta">
-                                  By { edge.node.author } - Published&nbsp; 
+                                  By { edge.node.author }
+                                  {/* - Published&nbsp; 
                                   { articleDateFormat(edge.node.publishedDate) }
+                                  */}
                                 </small>
                                 <GatsbyImage alt={edge.node.featuredImage.title} className="card-img"
                                 alt={edge.node.featuredImage.title}

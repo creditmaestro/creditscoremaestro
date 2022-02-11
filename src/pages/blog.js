@@ -77,7 +77,6 @@ const BlogsPage = () => {
       } else {
         setFilter(data);
       }
-      
     }
 
     let allArticles = (filteredArticles.length > 0) ? filteredArticles : data.allBlogs.edges;
@@ -85,12 +84,16 @@ const BlogsPage = () => {
 
     return (
         <Layout>
-          <SEO title="Blog" />
+          <SEO 
+            title="The Practical Credit Repair Blog | Credit Score Maestro"
+            description="Reap the benefits of great credit by tuning in to our blog. We offer the latest updates and effective strategies for building a great credit score."
+            url="https://creditscoremaestro.com/blog"
+            />
           <div className="container my-6">
             <div className="row">
               <div className="col-lg-8">
                <input className="blog-searchbox" placeholder="Search articles (by phrase, year etc...)"
-                onChange={searchInput} 
+                onChange={searchInput}
                 type="text" />
               <h1 className="blog-headers">Articles</h1>
                 {
@@ -104,9 +107,11 @@ const BlogsPage = () => {
                             </Link>
                             <p className="card-text blog-description-text">
                               <small className="post_meta">
-                                By { edge.node.author } - Published&nbsp; 
-                                { articleDateFormat(edge.node.publishedDate) }
-                              </small>
+                                By { edge.node.author }
+                                {/* - Published&nbsp; 
+                                  { articleDateFormat(edge.node.publishedDate) }
+                                */}
+                                </small>
                               <ClipExcerpt excerpt={edge.node.excerpt.excerpt} />
                             </p>
                           </div>
@@ -131,8 +136,10 @@ const BlogsPage = () => {
                           </Link>
                           <p className="card-text blog-description-text">
                             <small className="post_meta">
-                              By { edge.node.author } - Published&nbsp; 
-                              { articleDateFormat(edge.node.publishedDate) }
+                              By { edge.node.author } 
+                              {/* - Published&nbsp; 
+                                  { articleDateFormat(edge.node.publishedDate) }
+                              */}
                             </small>
                             <GatsbyImage alt={edge.node.featuredImage.title} className="card-img"
                             alt={edge.node.featuredImage.title}
