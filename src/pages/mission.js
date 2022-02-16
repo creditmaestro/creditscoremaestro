@@ -7,7 +7,11 @@ const Mission = () => {
 
     return (
         <Layout>
-        <SEO />
+        <SEO
+            title="Our Mission | Credit Score Maestro"
+            description="Credit Score Maestro company mission statement. We're here to help you build great credit."
+            url="https://creditscoremaestro.com/mission"
+        />
         <div className="container">
         <div className="col-lg-auto my-6">
             <div className="card wlgscreen-75 m-auto">

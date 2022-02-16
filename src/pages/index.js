@@ -42,7 +42,7 @@ const IndexPage = () => {
 
     return (
         <Layout>
-          <SEO title="Home" />
+          <SEO title="Credit Score Maestro Home" />
           <div className="container">
       
             <div className="row my-6">

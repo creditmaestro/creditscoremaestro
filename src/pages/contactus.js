@@ -6,7 +6,11 @@ import { StaticImage } from 'gatsby-plugin-image';
 const ContactUs = () => {
     return (
         <Layout>
-            <SEO />
+            <SEO
+            title="Contact Us | Credit Score Maestro"
+            description="Credit Score Maestro company contact information."
+            url="https://creditscoremaestro.com/contactus"
+        />
             <div className="container">
             <div className="col-lg-auto my-6">
                 <div className="card wlgscreen-75 m-auto">

@@ -12,7 +12,11 @@ const CreditForms = ({data}) => {
     return (
         <>
         <Layout>
-        <SEO title="Credit Library" />
+        <SEO 
+            title="Free Credit Repair Forms | Credit Score Maestro"
+            description="Free credit repair forms that will set you up to raise your credit score. All of our credit forms can be downloaded here."
+            url="https://creditscoremaestro.com/credit-forms"
+        />
         <div className="container">
             <div className="col-lg-auto my-6">
                 <div className="card wlgscreen-75 m-auto">
