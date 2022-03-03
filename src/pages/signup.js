@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import Layout from "../components/layout";
 import addToMailchimp from "gatsby-plugin-mailchimp";
-import { StaticImage } from 'gatsby-plugin-image';
 import UniHeader from '../components/uniHeader';
 
 const SignUp = () => {

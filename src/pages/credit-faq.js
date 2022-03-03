@@ -6,7 +6,6 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 const CreditQa = () => {
     return (
-        <>
         <Layout>
         <SEO 
             title="Credit Q & A | Credit Score Maestro"
@@ -157,7 +156,6 @@ const CreditQa = () => {
         </div>
         </div>
         </Layout>
-        </>
     );
 };
 

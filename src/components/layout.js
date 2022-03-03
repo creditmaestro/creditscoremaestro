@@ -100,9 +100,9 @@ export default function Layout({ children }) {
           <footer className="py-5 bg-dark">
             <div className="container">
               <p className="m-0 text-center text-white">
-                &nbsp;&nbsp;<Link to="/TermsOfUse" id="HyperLink1">Terms of Use</Link>&nbsp;&nbsp; | 
-                &nbsp;&nbsp;<Link to="/ContactUs" id="HyperLink2">Contact Us</Link>&nbsp;&nbsp; | 
-                &nbsp;&nbsp;<Link to="/AboutUs" id="HyperLink17">About Us</Link>
+                &nbsp;&nbsp;<Link to="/termsofuse">Terms of Use</Link>&nbsp;&nbsp; | 
+                &nbsp;&nbsp;<Link to="/contactus" id="HyperLink2">Contact Us</Link>&nbsp;&nbsp; | 
+                &nbsp;&nbsp;<Link to="/mission" id="HyperLink17">About Us</Link>
                 &nbsp;&nbsp;© {new Date().getFullYear()}, Credit Score Maestro LLC
               </p>
             </div>

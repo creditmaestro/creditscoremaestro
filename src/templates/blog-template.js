@@ -37,7 +37,7 @@ export default function BlogTemplate({data, pageContext }) {
                                     By { author }
                                     {/* - Published&nbsp; 
                                         { articleDateFormat(edge.node.publishedDate) }
-                                    */}
+                                    */} 
                                 </span>
                             </div>
                         </div>
