@@ -35,6 +35,7 @@ function SEO({ description, lang, meta, title, type, url }) {
       }}
       title={title}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      link={[  { rel : 'canonical', href : url  } ]}
       meta={[
         {
           name: `description`,
