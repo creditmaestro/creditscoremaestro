@@ -6,12 +6,15 @@ module.exports = {
     title: `Credit Score Maestro`,
     description: `Credit score maestro website.`,
     author: `JW Design`,
+    siteUrl: `https://creditscoremaestro.com`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
