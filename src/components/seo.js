@@ -78,7 +78,7 @@ function SEO({ description, lang, meta, title, type, url }) {
         }
       ].concat(meta)}
     >
-      <link rel="canonical" href="https://creditscoremaestro.com/Blog/Blog-Home.aspx" />
+      
     </Helmet>
   )
 }
