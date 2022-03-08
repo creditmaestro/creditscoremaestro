@@ -41,7 +41,7 @@ const CreditForms = ({data}) => {
                     let nameStr = item.node.relativePath;
                     let formName = nameStr.substr(0, nameStr.lastIndexOf('.'));
                     return (
-                        <Link to={"http://localhost:8000/"+item.node.publicURL} target="_child">
+                        <Link to={"https://creditscoremaestro.com/"+item.node.publicURL} target="_child">
                             { formName }
                         </Link>
                     )
