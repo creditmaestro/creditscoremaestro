@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import Qa from '../components/qa';
 import SEO from "../components/seo";
-import { StaticImage } from 'gatsby-plugin-image';
+import UniHeader from '../components/uniHeader';
 
 const CreditQa = () => {
     return (
@@ -12,22 +12,13 @@ const CreditQa = () => {
             description="Credit repair frequently asked questions that will guide you through the murky waters of rebuilding credit."
             url="https://creditscoremaestro.com/credit-faq"
             />
+        <UniHeader title="Credit FAQ">
+            &nbsp;&nbsp;&nbsp;&nbsp;There are many misconceptions about what it takes to build a top tier credit score or how to properly engage 
+            in credit repair. We at Credit Score Maestro are all about correcting these misconceptions. Here
+            are answers to some of the most frequently asked questions by consumers.
+        </UniHeader>
         <div className="container">
-            <div className="col-lg-auto my-6">
-            <div className="card wlgscreen-75 m-auto">
-                <div className="card-body text-center">
-                <StaticImage src="../images/Logo.png" id="image3" alt="Credit score maestro logo." />
-                    <h1>Credit FAQ</h1>
-                </div>
-                <div className="card-footer">
-                    &nbsp;&nbsp;&nbsp;&nbsp;There are many misconceptions about what it takes to build a top tier credit score or how to properly engage 
-                    in credit repair. We at Credit Score Maestro are all about correcting these misconceptions. Here
-                    are answers to some of the most frequently asked questions by consumers.
-                </div>
-            </div> 
-            <p>
-            
-            </p>
+        <div className="col-lg-auto my-6">
         <h1>Credit Q & A</h1>
         <ul className="qalist">
             <Qa 

@@ -11,7 +11,7 @@ const ContactUs = () => {
             description="Credit Score Maestro company contact information."
             url="https://creditscoremaestro.com/contactus"
         />
-            <div className="container">
+        <div className="container">
             <div className="col-lg-auto my-6">
                 <div className="card wlgscreen-75 m-auto">
                     <div className="card-body text-center">

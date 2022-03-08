@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 import addToMailchimp from "gatsby-plugin-mailchimp";
 import UniHeader from '../components/uniHeader';
 
-const SignUp = () => {
+const SignUp = () => { 
 
     const [email, setEmail] = useState('');
     const [result, setResult] = useState(null);
