@@ -13,12 +13,17 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: '/'
+      }
+    },
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
-          endpoint: process.env.MAILCHIMP_ENDPOINT, 
+         endpoint: process.env.MAILCHIMP_ENDPOINT, 
       },
     },
     {
