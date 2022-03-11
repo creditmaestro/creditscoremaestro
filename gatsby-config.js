@@ -14,12 +14,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-robots-txt`,
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        output: '/'
-      }
-    },
+    `gatsby-plugin-sitemap`,
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {

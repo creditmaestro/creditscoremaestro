@@ -42,7 +42,11 @@ const IndexPage = () => {
 
     return (
         <Layout>
-          <SEO title="Credit Score Maestro Home" />
+          <SEO 
+            title="Credit Score Maestro Home" 
+            description="Credit Score Maestro aims to help all consumers learn to not only repair their credit, but also maintain a great credit score and healthy financial life."
+            url="https://creditscoremaestro.com"
+            />
           <div className="container">
       
             <div className="row my-6">
